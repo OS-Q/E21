@@ -12,7 +12,7 @@ env = DefaultEnvironment()
 board = env.BoardConfig()
 MCU = board.get("build.mcu")
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("libopencm3")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("E21B")
 assert isdir(FRAMEWORK_DIR)
 
 
