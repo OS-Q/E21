@@ -7,7 +7,7 @@ env = DefaultEnvironment()
 platform = env.PioPlatform()
 board = env.BoardConfig()
 
-env.SConscript("_bare.py")
+env.SConscript("_common.py")
 
 FRAMEWORK_DIR = platform.get_package_dir("E21A")
 assert isdir(FRAMEWORK_DIR)

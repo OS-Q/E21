@@ -11,11 +11,11 @@ mcu = board.get("build.mcu", "")
 product_line = board.get("build.product_line", "")
 assert product_line, "Missing MCU or Product Line field"
 
-env.SConscript("_bare.py")
+env.SConscript("_common.py")
 
 CMSIS_DIR = platform.get_package_dir("framework-cmsis")
 CMSIS_DEVICE_DIR = platform.get_package_dir("framework-cmsis-" + mcu[0:7])
-LDSCRIPTS_DIR = platform.get_package_dir("tool-ldscripts-ststm32")
+LDSCRIPTS_DIR = platform.get_package_dir("E21L")
 assert all(os.path.isdir(d) for d in (CMSIS_DIR, CMSIS_DEVICE_DIR, LDSCRIPTS_DIR))
 
 
